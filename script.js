@@ -167,61 +167,80 @@
       });
     }
 
-    /* ---------- Carrossel de depoimentos ---------- */
+    /* ---------- Grid de depoimentos (Mural de Prestígio) ---------- */
     var REVIEWS = [
-      { name: 'Fátima Cardoso', initial: 'F', time: 'há 1 ano', stars: 5, text: 'Fiz tratamento na Isiortho e, sem dúvida, fiz a melhor escolha. Profissionais qualificadíssimos e maravilhosos. Realizei meu sonho de colocar um sorriso lindo no meu rosto. Obrigada, Isiortho.' },
+      { name: 'Fátima Cardoso', initial: 'F', time: 'há 1 ano', stars: 5, text: 'Fiz tratamento na Isiortho e, sem dúvida, fiz a melhor escolha. São profissionais qualificadíssimos, excelentes e maravilhosos. Só tenho a agradecer a toda a equipe do Dr. Victor. Desde a recepção (meninas qualificadas, educadas e simpáticas) até os profissionais que contribuíram para que eu pudesse realizar meu sonho de colocar um sorriso lindo no meu rosto. Obrigada, Isiortho. Um beijo no coração. ❤️' },
       { name: 'Miriam Calassara', initial: 'M', time: 'há 1 ano', stars: 5, text: 'Maravilhosa! Excelentes profissionais, atenciosos e, o mais importante, empenhados em nos devolver segurança e autoestima. Já recomendei e recomendo a várias pessoas.' },
+      { name: 'Janilza Maria Bispo', initial: 'J', time: 'há 1 ano', stars: 5, text: 'Minha experiência está sendo muito boa. A cirurgia foi muito tranquila. Eu estava muito receosa, mas a equipe me passou muita segurança. Continuo no processo. Equipe excelente. 👏👏👏👏' },
       { name: 'Almir Junior', initial: 'A', time: 'há 1 ano', stars: 5, text: 'Morria de medo de dentista, mas o Dr. Victor Frias tirou esse medo com um tratamento super bom.' },
-      { name: 'Gloria Maria', initial: 'G', time: 'há 1 ano', stars: 5, text: 'O melhor atendimento que eu já tive em Itaguaí. Atencioso, eficiente e entregou o trabalho superando minhas expectativas. Trabalho de excelência.' },
-      { name: 'Julio Marinho', initial: 'J', time: 'há 1 ano', stars: 5, text: 'Ótima experiência. Excelentíssimos dentistas, tanto o Dr. Igor quanto o Dr. Vitor. Todos muito profissionais. Recomendo muito.' }
+      { name: 'Maria Lucia de Souza', initial: 'M', time: 'há 1 ano', stars: 5, text: 'Experiência maravilhosa. Dr. Vitor e sua irmã sempre muito atenciosos, serviço de qualidade e toda a equipe excelente.' },
+      { name: 'Gloria Maria J. De Melo', initial: 'G', time: 'há 1 ano', stars: 5, text: 'O melhor atendimento que eu já tive em Itaguaí. Atencioso, educado, eficiente no que faz e, o melhor, entregou o trabalho como esperado, superando minhas expectativas. Trabalho de excelência.' },
+      { name: 'Julio Marinho', initial: 'J', time: 'há 1 ano', stars: 5, text: 'Ótima experiência. Excelentíssimos dentistas, tanto o Dr. Igor quanto o Dr. Vitor. Todos muito profissionais. Recomendo muito.' },
+      { name: 'Vanessa Ferreira', initial: 'V', time: 'há 1 ano', stars: 5, text: 'Atendimento e paciência dos profissionais são excelentes. Obrigada por estarem me proporcionando um sorriso novo.' },
+      { name: 'Talita Rodrigues', initial: 'T', time: 'há 1 ano', stars: 5, text: 'A melhor clínica odontológica de Itaguaí, sem dúvidas. ❤️ Super recomendo. O atendimento é excelente e a clínica é bem aconchegante. Trato lá desde os meus 12 anos de idade e hoje já estou com 24 anos. ❤️🫶🏾' },
+      { name: 'Lucimar Pinheiro', initial: 'L', time: 'há 1 ano', stars: 5, text: 'Fui muito bem assistida e o meu tratamento ficou perfeito. Serviço de primeira.' },
+      { name: 'Maria das Graças', initial: 'M', time: 'há 1 ano', stars: 5, text: 'Foi muito bom, ótimo trabalho e as pessoas que trabalham lá são muito atenciosas.' },
+      { name: 'Lourival Nunes', initial: 'L', time: 'há 1 ano', stars: 5, text: 'Excelente clínica, toda a equipe está de parabéns. Só gratidão.' },
+      { name: 'Letícia Dias', initial: 'L', time: 'há 4 anos', stars: 5, text: 'Bons profissionais que atuam de forma séria e segura. Preços acessíveis, com facilidade no pagamento. Ótima recepção e conforto!!' },
+      { name: 'Otávio Gusmão', initial: 'O', time: 'há 4 anos', stars: 5, text: 'Profissionais competentes, ótimo atendimento e a recepção de todos que trabalham lá é sem igual. Eu aprovo.' },
+      { name: 'Daniel Ferreira', initial: 'D', time: 'há 4 anos', stars: 5, text: 'Fui muito bem atendido nessa clínica. Atingiu minhas expectativas! Eu recomendo!' },
+      { name: 'Leo Marins', initial: 'L', time: 'há 3 anos', stars: 5, text: 'Atendimento top! As instalações da clínica são modernas, limpas e agradáveis.' },
+      { name: 'Sissa Vaz', initial: 'S', time: 'há 4 anos', stars: 5, text: 'Clínica muito limpa, atendentes muito simpáticas e ambiente bem aconchegante. Profissionais qualificados. Recomendo!' }
     ];
-    var carousel = document.getElementById('carousel');
-    var dotsWrap = document.getElementById('dots');
-    if (carousel && dotsWrap) {
-      REVIEWS.forEach(function (r, i) {
-        var fig = document.createElement('figure');
-        fig.className = 'slide' + (i === 0 ? ' is-active' : '');
-        fig.innerHTML =
-          '<div class="slide__stars">' + '★'.repeat(r.stars) + '</div>' +
-          '<blockquote>“' + r.text + '”</blockquote>' +
-          '<figcaption><span class="slide__av">' + r.initial + '</span>' +
-          '<div><div class="slide__name">' + r.name + '</div><div class="slide__time">' + r.time + '</div></div></figcaption>';
-        carousel.appendChild(fig);
+    var row1 = document.getElementById('reviews-row-1');
+    var row2 = document.getElementById('reviews-row-2');
+    if (row1 && row2) {
+      // Divide depoimentos: 9 na linha 1, 8 na linha 2
+      var mid = 9;
+      var list1 = REVIEWS.slice(0, mid);
+      var list2 = REVIEWS.slice(mid);
 
-        var dot = document.createElement('button');
-        dot.setAttribute('aria-label', 'Depoimento ' + (i + 1));
-        if (i === 0) dot.className = 'is-active';
-        dot.addEventListener('click', function () { go(i); restart(); });
-        dotsWrap.appendChild(dot);
-      });
+      var buildTrack = function (items) {
+        var track = document.createElement('div');
+        track.className = 'reviews__marquee-track';
+        
+        var buildCards = function () {
+          items.forEach(function (r) {
+            var card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML =
+              '<div class="review-card__header">' +
+                '<div class="review-card__stars">' + '★'.repeat(r.stars) + '</div>' +
+                '<svg class="review-card__google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.2c0-.7-.06-1.4-.18-2H12v3.8h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1-3.8 1-2.9 0-5.4-2-6.3-4.6H2v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.7 14a6.6 6.6 0 0 1 0-4.2V7H2a11 11 0 0 0 0 9.9z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 0 0 2 7l3.7 2.8C6.6 7.3 9.1 5.4 12 5.4z"/></svg>' +
+              '</div>' +
+              '<blockquote class="review-card__text">“' + r.text + '”</blockquote>' +
+              '<div class="review-card__footer">' +
+                '<span class="review-card__av">' + r.initial + '</span>' +
+                '<div>' +
+                  '<div class="review-card__name">' + r.name + '</div>' +
+                  '<div class="review-card__time">' + r.time + '</div>' +
+                '</div>' +
+              '</div>';
+            track.appendChild(card);
+          });
+        };
 
-      var slides = carousel.querySelectorAll('.slide');
-      var dots = dotsWrap.querySelectorAll('button');
-      var cur = 0, timer = null;
-
-      var go = function (n) {
-        cur = (n + slides.length) % slides.length;
-        slides.forEach(function (s, i) { s.classList.toggle('is-active', i === cur); });
-        dots.forEach(function (d, i) { d.classList.toggle('is-active', i === cur); });
+        buildCards();
+        buildCards(); // Duplica para criar loop infinito perfeito
+        return track;
       };
-      var restart = function () {
-        if (timer) clearInterval(timer);
-        if (!REDUCED) timer = setInterval(function () { go(cur + 1); }, 6000);
-      };
 
-      document.getElementById('prev').addEventListener('click', function () { go(cur - 1); restart(); });
-      document.getElementById('next').addEventListener('click', function () { go(cur + 1); restart(); });
-      restart();
+      row1.appendChild(buildTrack(list1));
+      row2.appendChild(buildTrack(list2));
     }
-
-    /* ---------- FAQ: ícone +/− ---------- */
-    document.querySelectorAll('.faq__item').forEach(function (d) {
-      d.addEventListener('toggle', function () {
-        var ico = d.querySelector('.faq__ico');
-        if (ico) ico.textContent = d.open ? '–' : '+';
+    /* ---------- FAQ: acordeão exclusivo ---------- */
+    var faqItems = document.querySelectorAll('.faq__item');
+    faqItems.forEach(function (details) {
+      details.addEventListener('toggle', function () {
+        if (details.open) {
+          faqItems.forEach(function (other) {
+            if (other !== details) {
+              other.removeAttribute('open');
+            }
+          });
+        }
       });
     });
-
     /* ---------- Vídeos da galeria ---------- */
     document.querySelectorAll('.playbtn').forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -450,5 +469,185 @@
       });
     }
 
+    /* ============================================================
+       VÍDEOS INSTITUCIONAIS — Carrossel Coverflow
+       ativo ao centro + 2 de fundo · play inline · Som · Expandir
+       ============================================================ */
+    (function () {
+      var stage = document.getElementById('vi-track');
+      if (!stage) return;
+
+      var dotsEl   = document.getElementById('vi-dots');
+      var prevBtn  = document.getElementById('vi-prev');
+      var nextBtn  = document.getElementById('vi-next');
+      var modal    = document.getElementById('vi-modal');
+      var mVideo   = document.getElementById('vi-modal-video');
+      var mTitle   = document.getElementById('vi-modal-title');
+      var mTag     = document.getElementById('vi-modal-tag');
+      var mClose   = document.getElementById('vi-modal-close');
+      var mOverlay = document.getElementById('vi-modal-overlay');
+
+      var cards = Array.prototype.slice.call(stage.querySelectorAll('.vi-card'));
+      var n = cards.length;
+      if (!n) return;
+      var active = 0;
+
+      /* ---- Dots ---- */
+      if (dotsEl) {
+        cards.forEach(function (_, i) {
+          var b = document.createElement('button');
+          b.setAttribute('aria-label', 'Ir para vídeo ' + (i + 1));
+          b.addEventListener('click', function () { go(i); });
+          dotsEl.appendChild(b);
+        });
+      }
+
+      /* ---- Zera o card (pausa, muta, tira reprodução ativa) ---- */
+      function resetCard(card) {
+        var v = card.querySelector('video');
+        if (v) { v.pause(); v.muted = true; try { v.currentTime = 0; } catch (e) {} }
+        card.classList.remove('is-playing', 'is-muted');
+        var txt = card.querySelector('.vi-card__ctrl-txt');
+        if (txt) txt.textContent = 'Som ativo';
+      }
+
+      /* ---- Renderiza posições (ativo / laterais / ocultos) ---- */
+      function render() {
+        cards.forEach(function (card, i) {
+          var rel = ((i - active) % n + n) % n; /* 0..n-1 */
+          card.classList.remove('is-active', 'is-prev', 'is-next', 'is-hidden');
+          if (rel === 0)        card.classList.add('is-active');
+          else if (rel === 1)   card.classList.add('is-next');
+          else if (rel === n-1) card.classList.add('is-prev');
+          else                  card.classList.add('is-hidden');
+        });
+        if (dotsEl) {
+          Array.prototype.forEach.call(dotsEl.children, function (d, i) {
+            d.classList.toggle('is-active', i === active);
+          });
+        }
+        /* pausa todos os não-ativos; toca preview mudo no ativo */
+        cards.forEach(function (card, i) { if (i !== active) resetCard(card); });
+        var cur = cards[active];
+        if (!cur.classList.contains('is-playing')) {
+          var v = cur.querySelector('video');
+          if (v) { v.muted = true; v.play().catch(function () {}); }
+        }
+      }
+
+      function go(i) { active = ((i % n) + n) % n; render(); }
+      function prev() { go(active - 1); }
+      function next() { go(active + 1); }
+
+      if (prevBtn) prevBtn.addEventListener('click', prev);
+      if (nextBtn) nextBtn.addEventListener('click', next);
+
+      /* ---- Comportamento por card ---- */
+      cards.forEach(function (card, index) {
+        var video    = card.querySelector('video');
+        var playBtn  = card.querySelector('.vi-card__play');
+        var soundBtn = card.querySelector('.vi-card__sound');
+        var soundTxt = card.querySelector('.vi-card__ctrl-txt');
+        var expandBtn= card.querySelector('.vi-card__expand');
+        if (!video) return;
+
+        /* clicar num card de fundo → traz ao centro */
+        card.addEventListener('click', function () {
+          if (!card.classList.contains('is-active')) go(index);
+        });
+
+        /* Play → roda no card COM som + mostra a barra */
+        function startPlay() {
+          card.classList.add('is-playing');
+          card.classList.remove('is-muted');
+          video.muted = false;
+          if (soundTxt) soundTxt.textContent = 'Som ativo';
+          video.play().catch(function () {
+            /* se o navegador bloquear o áudio, cai para mudo */
+            video.muted = true;
+            card.classList.add('is-muted');
+            if (soundTxt) soundTxt.textContent = 'Sem som';
+            video.play().catch(function () {});
+          });
+        }
+        if (playBtn) playBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          startPlay();
+        });
+
+        /* clicar no vídeo em reprodução → pausar / continuar */
+        video.addEventListener('click', function (e) {
+          if (!card.classList.contains('is-active')) return;
+          if (!card.classList.contains('is-playing')) return;
+          e.stopPropagation();
+          if (video.paused) video.play().catch(function () {});
+          else video.pause();
+        });
+
+        /* Som on/off */
+        if (soundBtn) soundBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          video.muted = !video.muted;
+          card.classList.toggle('is-muted', video.muted);
+          if (soundTxt) soundTxt.textContent = video.muted ? 'Sem som' : 'Som ativo';
+        });
+
+        /* Expandir → modal */
+        if (expandBtn) expandBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          openModal(card, video);
+        });
+      });
+
+      /* ---- Modal (Expandir) ---- */
+      function openModal(card, video) {
+        if (!modal || !mVideo) return;
+        video.pause();
+        mVideo.src = video.currentSrc || video.src;
+        if (mTitle) mTitle.textContent = card.getAttribute('data-title') || '';
+        if (mTag)   mTag.textContent   = card.getAttribute('data-tag') || '';
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        mVideo.currentTime = 0;
+        mVideo.muted = false;
+        mVideo.play().catch(function () {});
+      }
+      function closeModal() {
+        if (!modal) return;
+        modal.classList.remove('is-open');
+        if (mVideo) { mVideo.pause(); mVideo.src = ''; }
+        document.body.style.overflow = '';
+      }
+      if (mClose)   mClose.addEventListener('click', closeModal);
+      if (mOverlay) mOverlay.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) closeModal();
+      });
+
+      /* ---- Só reproduz enquanto a seção estiver visível ---- */
+      var section = document.getElementById('videos-institucionais');
+      if (section && 'IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          var en = entries[0];
+          if (!en) return;
+          if (en.isIntersecting) {
+            /* voltou à seção: retoma o preview mudo do card ativo */
+            var cur = cards[active];
+            if (cur && !cur.classList.contains('is-playing')) {
+              var v = cur.querySelector('video');
+              if (v) { v.muted = true; v.play().catch(function () {}); }
+            }
+          } else {
+            /* saiu da seção: para tudo e reinicia do zero */
+            cards.forEach(function (card) { resetCard(card); });
+          }
+        }, { threshold: 0.25 });
+        io.observe(section);
+      }
+
+      render();
+    })();
+
   });
 })();
+

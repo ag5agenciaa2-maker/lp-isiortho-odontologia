@@ -307,76 +307,241 @@
 </section>
 
 <!-- INSTITUTIONAL VIDEOS -->
-<section id="videos-institucionais" class="videos-section">
-  <div class="videos-section__inner">
-    <div class="videos-section__head">
-      <span class="eyebrow eyebrow--champ reveal"><span class="rule"></span>Vídeos Institucionais</span>
-      <h2 class="section-title section-title--light reveal">Nossos especialistas e histórias</h2>
+<section id="videos-institucionais" class="vi">
+  <div class="vi__inner vi__grid">
+    <div class="vi__text reveal reveal--left">
+      <span class="eyebrow eyebrow--champ"><span class="rule"></span>Vídeos Institucionais</span>
+      <h2 class="section-title section-title--light">Nossos especialistas e histórias reais</h2>
+      <p class="vi__lead">Conheça os profissionais, os bastidores e os pacientes que transformaram suas vidas na Isiortho — histórias reais contadas por quem recuperou o sorriso.</p>
     </div>
-    
-    <div class="videos-grid">
-      <!-- Vídeo A: Dra. Isadora -->
-      <figure class="video-card reveal">
-        <video src="Assets/isiortho-dra-isadora-explicacao-protese-protocolo.mp4" muted loop playsinline preload="metadata"></video>
-        <button class="playbtn" aria-label="Reproduzir vídeo da Dra. Isadora"><span>&#9654;</span></button>
-        <div class="video-card__info">
-          <span class="video-card__tag">Prótese Protocolo</span>
-          <h3>Dra. Isadora Frias</h3>
-          <p>Explicação detalhada sobre a dentadura fixa.</p>
-        </div>
-      </figure>
 
-      <!-- Vídeo B: Dr. Victor Dica -->
-      <figure class="video-card reveal">
-        <video src="Assets/isiortho-dr-victor-frias-dica-implante.mp4" muted loop playsinline preload="metadata"></video>
-        <button class="playbtn" aria-label="Reproduzir vídeo com dicas do Dr. Victor"><span>&#9654;</span></button>
-        <div class="video-card__info">
-          <span class="video-card__tag">Implantodontia</span>
-          <h3>Dr. Victor Frias</h3>
-          <p>Dicas clínicas importantes sobre o tratamento.</p>
-        </div>
-      </figure>
+    <div class="vi__carousel reveal reveal--right">
+      <div class="vi__stage" id="vi-track">
 
-      <!-- Vídeo C: Maria de Fátima -->
-      <figure class="video-card reveal">
-        <video src="Assets/isiortho-depoimento-paciente-maria-de-fatima.mp4" muted loop playsinline preload="metadata"></video>
-        <button class="playbtn" aria-label="Reproduzir depoimento da Maria de Fátima"><span>&#9654;</span></button>
-        <div class="video-card__info">
-          <span class="video-card__tag">Depoimento</span>
-          <h3>Maria de Fátima</h3>
-          <p>A transformação real de sorrir com segurança.</p>
-        </div>
-      </figure>
+        <!-- Vídeo 1 -->
+        <article class="vi-card reveal" data-title="Dra. Isadora Frias" data-tag="Especialista">
+          <div class="vi-card__media">
+            <video src="Assets/isiortho-dra-isadora-explicacao-protese-protocolo.mp4" loop playsinline preload="metadata"></video>
+            <span class="vi-card__scrim"></span>
+            <span class="vi-card__tag">Especialista</span>
+            <button class="vi-card__play" type="button" aria-label="Reproduzir vídeo da Dra. Isadora">
+              <span class="vi-card__play-ring"></span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="vi-card__bar">
+              <button class="vi-card__ctrl vi-card__sound" type="button" aria-label="Ativar ou desativar o som">
+                <svg class="vi-card__ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                <svg class="vi-card__ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+                <span class="vi-card__ctrl-txt">Som ativo</span>
+              </button>
+              <button class="vi-card__ctrl vi-card__expand" type="button" aria-label="Expandir vídeo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6M21 9V3h-6M3 15v6h6M15 21h6v-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="vi-card__info">
+            <h3>Dra. Isadora Frias</h3>
+          </div>
+        </article>
 
-      <!-- Vídeo D: Dr. Igor Consulta -->
-      <figure class="video-card reveal">
-        <video src="Assets/isiortho-dr-igor-batista-consulta-itaguai.mp4" muted loop playsinline preload="metadata"></video>
-        <button class="playbtn" aria-label="Reproduzir vídeo do Dr. Igor"><span>&#9654;</span></button>
-        <div class="video-card__info">
-          <span class="video-card__tag">Consulta</span>
-          <h3>Dr. Igor Batista</h3>
-          <p>Dinâmica do atendimento humanizado no consultório.</p>
-        </div>
-      </figure>
+        <!-- Vídeo 2 -->
+        <article class="vi-card reveal" data-title="Dr. Victor Frias" data-tag="Especialista">
+          <div class="vi-card__media">
+            <video src="Assets/isiortho-dr-victor-frias-dica-implante.mp4" loop playsinline preload="metadata"></video>
+            <span class="vi-card__scrim"></span>
+            <span class="vi-card__tag">Especialista</span>
+            <button class="vi-card__play" type="button" aria-label="Reproduzir dica do Dr. Victor">
+              <span class="vi-card__play-ring"></span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="vi-card__bar">
+              <button class="vi-card__ctrl vi-card__sound" type="button" aria-label="Ativar ou desativar o som">
+                <svg class="vi-card__ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                <svg class="vi-card__ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+                <span class="vi-card__ctrl-txt">Som ativo</span>
+              </button>
+              <button class="vi-card__ctrl vi-card__expand" type="button" aria-label="Expandir vídeo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6M21 9V3h-6M3 15v6h6M15 21h6v-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="vi-card__info">
+            <h3>Dr. Victor Frias</h3>
+          </div>
+        </article>
+
+        <!-- Vídeo 3 -->
+        <article class="vi-card reveal" data-title="Maria de Fátima" data-tag="Depoimento">
+          <div class="vi-card__media">
+            <video src="Assets/isiortho-depoimento-paciente-maria-de-fatima.mp4" loop playsinline preload="metadata"></video>
+            <span class="vi-card__scrim"></span>
+            <span class="vi-card__tag">Depoimento</span>
+            <button class="vi-card__play" type="button" aria-label="Reproduzir depoimento da Maria de Fátima">
+              <span class="vi-card__play-ring"></span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="vi-card__bar">
+              <button class="vi-card__ctrl vi-card__sound" type="button" aria-label="Ativar ou desativar o som">
+                <svg class="vi-card__ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                <svg class="vi-card__ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+                <span class="vi-card__ctrl-txt">Som ativo</span>
+              </button>
+              <button class="vi-card__ctrl vi-card__expand" type="button" aria-label="Expandir vídeo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6M21 9V3h-6M3 15v6h6M15 21h6v-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="vi-card__info">
+            <h3>Maria de Fátima</h3>
+          </div>
+        </article>
+
+        <!-- Vídeo 4 -->
+        <article class="vi-card reveal" data-title="Consulta — Implante Sênior" data-tag="Depoimento">
+          <div class="vi-card__media">
+            <video src="Assets/isiortho-consulta-paciente-terceira-idade-implantes.mp4" loop playsinline preload="metadata"></video>
+            <span class="vi-card__scrim"></span>
+            <span class="vi-card__tag">Depoimento</span>
+            <button class="vi-card__play" type="button" aria-label="Reproduzir consulta de implante em paciente idosa">
+              <span class="vi-card__play-ring"></span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="vi-card__bar">
+              <button class="vi-card__ctrl vi-card__sound" type="button" aria-label="Ativar ou desativar o som">
+                <svg class="vi-card__ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                <svg class="vi-card__ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+                <span class="vi-card__ctrl-txt">Som ativo</span>
+              </button>
+              <button class="vi-card__ctrl vi-card__expand" type="button" aria-label="Expandir vídeo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6M21 9V3h-6M3 15v6h6M15 21h6v-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="vi-card__info">
+            <h3>Consulta — Implante Sênior</h3>
+          </div>
+        </article>
+
+        <!-- Vídeo 5 -->
+        <article class="vi-card reveal" data-title="Experiência com Implantes" data-tag="Depoimento">
+          <div class="vi-card__media">
+            <video src="Assets/isiortho-depoimento-paciente-implante.mp4" loop playsinline preload="metadata"></video>
+            <span class="vi-card__scrim"></span>
+            <span class="vi-card__tag">Depoimento</span>
+            <button class="vi-card__play" type="button" aria-label="Reproduzir depoimento de implante">
+              <span class="vi-card__play-ring"></span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="vi-card__bar">
+              <button class="vi-card__ctrl vi-card__sound" type="button" aria-label="Ativar ou desativar o som">
+                <svg class="vi-card__ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                <svg class="vi-card__ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+                <span class="vi-card__ctrl-txt">Som ativo</span>
+              </button>
+              <button class="vi-card__ctrl vi-card__expand" type="button" aria-label="Expandir vídeo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6M21 9V3h-6M3 15v6h6M15 21h6v-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="vi-card__info">
+            <h3>Experiência com Implantes</h3>
+          </div>
+        </article>
+
+        <!-- Vídeo 6 -->
+        <article class="vi-card reveal" data-title="Cirurgia Guiada 3D" data-tag="Tecnologia">
+          <div class="vi-card__media">
+            <video src="Assets/isiortho-planejamento-digital-3d-dentistas.mp4" loop playsinline preload="metadata"></video>
+            <span class="vi-card__scrim"></span>
+            <span class="vi-card__tag">Tecnologia</span>
+            <button class="vi-card__play" type="button" aria-label="Reproduzir vídeo sobre planejamento 3D">
+              <span class="vi-card__play-ring"></span>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <div class="vi-card__bar">
+              <button class="vi-card__ctrl vi-card__sound" type="button" aria-label="Ativar ou desativar o som">
+                <svg class="vi-card__ic-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>
+                <svg class="vi-card__ic-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>
+                <span class="vi-card__ctrl-txt">Som ativo</span>
+              </button>
+              <button class="vi-card__ctrl vi-card__expand" type="button" aria-label="Expandir vídeo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H3v6M21 9V3h-6M3 15v6h6M15 21h6v-6"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="vi-card__info">
+            <h3>Cirurgia Guiada 3D</h3>
+          </div>
+        </article>
+
+      </div><!-- /vi__stage -->
+
+      <div class="vi__controls">
+        <button class="vi__arrow vi__arrow--prev" id="vi-prev" aria-label="Vídeo anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="vi__dots" id="vi-dots"></div>
+        <button class="vi__arrow vi__arrow--next" id="vi-next" aria-label="Próximo vídeo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div><!-- /vi__carousel -->
+  </div>
+
+  <!-- Modal (abre só ao clicar em Expandir) -->
+  <div id="vi-modal" class="vi-modal" role="dialog" aria-modal="true" aria-label="Reprodutor de vídeo">
+    <div class="vi-modal__overlay" id="vi-modal-overlay"></div>
+    <div class="vi-modal__box">
+      <button class="vi-modal__close" id="vi-modal-close" aria-label="Fechar vídeo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="vi-modal__frame">
+        <video id="vi-modal-video" controls playsinline></video>
+      </div>
+      <div class="vi-modal__cap">
+        <span class="vi-modal__tag" id="vi-modal-tag"></span>
+        <strong id="vi-modal-title"></strong>
+      </div>
     </div>
   </div>
+
 </section>
+
 
 <!-- ABOUT -->
 <section id="sobre" class="about">
-  <figure class="about__fig reveal reveal--left">
-    <div class="about__photo"><img src="Assets/isiortho-dentistas-victor-frias-igor-batista-itaguai.webp" alt="Dr. Victor Frias e Dr. Igor Batista"></div>
-    <div class="about__chip"><span class="about__chip-n">20<span>+</span></span><span class="about__chip-l">anos de experiência</span></div>
-  </figure>
-  <div class="about__body">
-    <span class="eyebrow reveal"><span class="rule"></span>A Clínica</span>
-    <h2 class="section-title reveal">Cuidado humano e tecnologia, lado a lado</h2>
-    <p class="about__lead reveal">Há 20 anos em Itaguaí, a Isiortho é referência em implantes e dentadura fixa. Unimos cirurgias guiadas sem cortes ao planejamento digital para entregar resultados previsíveis, com segurança e conforto em cada etapa.</p>
-    <div class="counters">
-      <div class="counter reveal"><div class="counter__n"><span class="count" data-count="20">0</span><span class="counter__suffix">+</span></div><div class="counter__l">anos de experiência</div></div>
-      <div class="counter reveal"><div class="counter__n"><span class="count" data-count="60">0</span></div><div class="counter__l">avaliações 4,7&#9733; no Google</div></div>
-      <div class="counter reveal"><div class="counter__n"><span class="count" data-count="6">0</span></div><div class="counter__l">bairros atendidos</div></div>
-      <div class="counter reveal"><div class="counter__n"><span class="count" data-count="8.9">0</span><span class="counter__suffix">K</span></div><div class="counter__l">seguidores no Instagram</div></div>
+  <div class="about__body reveal reveal--left">
+    <span class="about__subtitle">Isiortho Odontologia</span>
+    <h2 class="about__title">Duas décadas dedicadas à arte de <em>reconstruir sorrisos</em>.</h2>
+    
+    <p class="about__lead">Fundada em Itaguaí-RJ pelos especialistas Dr. Victor Frias e Dr. Igor Batista, a Clínica Isiortho é referência em implantes e reabilitações orais. Integramos planejamento digital 3D a um atendimento humanizado e confortável.</p>
+    
+    <div class="about__quote-clean">
+      <span class="quote-mark">&ldquo;</span>
+      <p>Nossa filosofia une a precisão da tecnologia digital com a sensibilidade do cuidado humano.</p>
+      <cite>— Equipe Médica Isiortho</cite>
+    </div>
+    
+    <div class="about__metrics-grid">
+      <div class="metric-item">
+        <span class="metric-val"><span class="count" data-count="20">0</span><span class="metric-suffix"> anos</span></span>
+        <span class="metric-lbl">De atuação clínica</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-val"><span class="count" data-count="3">0</span><span class="metric-suffix"> mil+</span></span>
+        <span class="metric-lbl">Sorrisos novos</span>
+      </div>
+      <div class="metric-item">
+        <span class="metric-val"><span class="count" data-count="15">0</span><span class="metric-suffix"> mil+</span></span>
+        <span class="metric-lbl">Procedimentos realizados</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="about__media reveal reveal--right">
+    <div class="about__photo-wrapper">
+      <img src="Assets/isiortho-dentistas-victor-frias-igor-batista-itaguai.webp" alt="Dr. Victor Frias e Dr. Igor Batista">
+      <div class="about__photo-line"></div>
     </div>
   </div>
 </section>
@@ -391,58 +556,72 @@
       </div>
       <div class="google-badge reveal">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.5 12.2c0-.7-.06-1.4-.18-2H12v3.8h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1-3.8 1-2.9 0-5.4-2-6.3-4.6H2v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.7 14a6.6 6.6 0 0 1 0-4.2V7H2a11 11 0 0 0 0 9.9z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 0 0 2 7l3.7 2.8C6.6 7.3 9.1 5.4 12 5.4z"/></svg>
-        <div><div class="google-badge__n">4,7 &#9733;</div><div class="google-badge__l">60 avaliações no Google</div></div>
+        <div><div class="google-badge__n">4,7 &#9733;</div><div class="google-badge__l">60+ avaliações no Google</div></div>
       </div>
     </div>
-    <div class="carousel" id="carousel"></div>
-    <div class="carousel__nav">
-      <button class="cbtn" id="prev" aria-label="Anterior">&larr;</button>
-      <button class="cbtn" id="next" aria-label="Próximo">&rarr;</button>
-      <div class="dots" id="dots"></div>
-      <a class="reviews__link" href="https://search.google.com/local/writereview?placeid=ChIJI_O5v4n4mwARbOdi-g7_7yU" target="_blank" rel="noopener">Avaliar no Google &rarr;</a>
+    
+    <div class="reviews__marquees">
+      <div class="reviews__marquee-row row-1" id="reviews-row-1"></div>
+      <div class="reviews__marquee-row row-2" id="reviews-row-2"></div>
+    </div>
+    
+    <div class="reviews__actions reveal">
+      <a class="reviews__link" href="https://search.google.com/local/writereview?placeid=ChIJI_O5v4n4mwARbOdi-g7_7yU" target="_blank" rel="noopener">
+        <svg class="reviews__link-google-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.5 12.2c0-.7-.06-1.4-.18-2H12v3.8h5.9a5 5 0 0 1-2.2 3.3v2.7h3.5c2-1.9 3.3-4.7 3.3-7.8z"/><path fill="currentColor" d="M12 23c3 0 5.5-1 7.3-2.7l-3.5-2.7c-1 .7-2.3 1-3.8 1-2.9 0-5.4-2-6.3-4.6H2v2.8A11 11 0 0 0 12 23z"/><path fill="currentColor" d="M5.7 14a6.6 6.6 0 0 1 0-4.2V7H2a11 11 0 0 0 0 9.9z"/><path fill="currentColor" d="M12 5.4c1.6 0 3 .6 4.2 1.6l3.1-3.1A11 11 0 0 0 2 7l3.7 2.8C6.6 7.3 9.1 5.4 12 5.4z"/></svg>
+        <span>Deixar avaliação no Google</span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- TOUR 360 -->
-<section id="tour" class="tour">
-  <div class="tour__text">
-    <span class="eyebrow reveal"><span class="rule"></span>Tour Virtual 360&deg;</span>
-    <h2 class="section-title reveal">Conheça nossa estrutura antes de chegar</h2>
-    <p class="tour__lead reveal">Um ambiente acolhedor e preparado para o seu conforto. Explore a recepção e os consultórios em uma visita virtual.</p>
-  </div>
-  <div class="tour__embed reveal">
-    <iframe src="https://www.google.com/maps/embed?pb=!4v1782740217191!6m8!1m7!1slz2PVcYhhK6gIwjK0cBsxg!2m2!1d-22.8723553784187!2d-43.77789965456869!3f96.78308738499757!4f1.211071143122112!5f0.7820865974627469" width="100%" height="440" style="border:0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Tour Virtual 360 Isiortho"></iframe>
-  </div>
-</section>
 
 <!-- FAQ -->
 <section id="faq" class="faq">
-  <div class="faq__head">
-    <span class="eyebrow reveal">Dúvidas frequentes</span>
-    <h2 class="section-title reveal">Antes de agendar, talvez você se pergunte&hellip;</h2>
-  </div>
-  <div class="faq__list">
-    <details class="faq__item reveal">
-      <summary>Tenho medo de dentista. O tratamento dói?<span class="faq__ico">+</span></summary>
-      <p>Cuidamos para que cada etapa seja confortável. As cirurgias guiadas e sem cortes reduzem o trauma e a dor, e nossa equipe é reconhecida justamente por acolher quem tem receio.</p>
-    </details>
-    <details class="faq__item reveal">
-      <summary>O que é cirurgia de implante guiada e sem cortes?<span class="faq__ico">+</span></summary>
-      <p>É um procedimento planejado digitalmente antes da cirurgia. Com guias precisos, o implante é colocado sem grandes incisões — o que torna o pós-operatório mais rápido e tranquilo.</p>
-    </details>
-    <details class="faq__item reveal">
-      <summary>Quanto tempo dura o tratamento com implantes?<span class="faq__ico">+</span></summary>
-      <p>Varia conforme cada caso, mas o planejamento digital permite estimar prazos logo na avaliação. Em muitos casos é possível sair com dentes provisórios fixos no mesmo dia.</p>
-    </details>
-    <details class="faq__item reveal">
-      <summary>Posso repor todos os dentes com dentadura fixa?<span class="faq__ico">+</span></summary>
-      <p>Sim. A prótese protocolo (dentadura fixa sobre implantes) devolve a arcada completa de forma fixa, com estabilidade para comer e falar com naturalidade.</p>
-    </details>
-    <details class="faq__item reveal">
-      <summary>A clínica atende por convênio? Como funciona o pagamento?<span class="faq__ico">+</span></summary>
-      <p>Não trabalhamos com planos de saúde. Apresentamos as condições e formas de pagamento na avaliação — fale com nossa equipe pelo WhatsApp para conhecer as opções.</p>
-    </details>
+  <div class="faq__grid">
+    <div class="faq__sidebar reveal reveal--left">
+      <span class="eyebrow"><span class="rule"></span>Dúvidas Frequentes</span>
+      <h2 class="section-title">Antes de agendar, talvez você se pergunte...</h2>
+      <p class="faq__sidebar-lead">Esclarecemos os principais pontos sobre os tratamentos da Isiortho para que você venha com total segurança.</p>
+      <div class="faq__sidebar-action">
+        <a href="https://wa.me/5521990162232?text=Ol%C3%A1%2C%20gostaria%20de%20esclarecer%20uma%20d%C3%BAvida%20sobre%20o%20tratamento." target="_blank" rel="noopener" class="faq__wa-btn">
+          <svg class="faq__wa-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.13 8.13 0 012.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.44 0-2.86-.38-4.11-1.09l-.3-.18-3.06.8.82-2.98-.2-.31a8.18 8.18 0 01-1.26-4.38c0-4.54 3.7-8.24 8.23-8.24M8.75 8c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.52c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.09.47-.07 1.45-.59 1.65-1.17.2-.57.2-1.07.14-1.17-.06-.1-.22-.16-.48-.29-.25-.13-1.45-.71-1.67-.8-.22-.09-.38-.13-.54.13-.16.25-.61.79-.75.94-.14.15-.28.17-.54.04-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.76-.15-.26-.02-.4.11-.53.12-.11.25-.3.38-.45.13-.15.17-.25.25-.42.09-.17.04-.32-.02-.45-.06-.13-.54-1.3-.74-1.79-.19-.48-.39-.41-.54-.42-.14 0-.3-.01-.46-.01"/></svg>
+          <span>Esclarecer outra dúvida</span>
+        </a>
+      </div>
+    </div>
+    
+    <div class="faq__list">
+      <details class="faq__item reveal" name="faq">
+        <summary>Tenho medo de dentista. O tratamento dói?<span class="faq__chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+        <div class="faq__content">
+          <p>Cuidamos para que cada etapa seja confortável. As cirurgias guiadas e sem cortes reduzem o trauma e a dor, e nossa equipe é reconhecida justamente por acolher quem tem receio.</p>
+        </div>
+      </details>
+      <details class="faq__item reveal" name="faq">
+        <summary>O que é cirurgia de implante guiada e sem cortes?<span class="faq__chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+        <div class="faq__content">
+          <p>É um procedimento planejado digitalmente antes da cirurgia. Com guias precisos, o implante é colocado sem grandes incisões — o que torna o pós-operatório mais rápido e tranquilo.</p>
+        </div>
+      </details>
+      <details class="faq__item reveal" name="faq">
+        <summary>Quanto tempo dura o tratamento com implantes?<span class="faq__chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+        <div class="faq__content">
+          <p>Varia conforme cada caso, mas o planejamento digital permite estimar prazos logo na avaliação. Em muitos casos é possível sair com dentes provisórios fixos no mesmo dia.</p>
+        </div>
+      </details>
+      <details class="faq__item reveal" name="faq">
+        <summary>Posso repor todos os dentes com dentadura fixa?<span class="faq__chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+        <div class="faq__content">
+          <p>Sim. A prótese protocolo (dentadura fixa sobre implantes) devolve a arcada completa de forma fixa, com estabilidade para comer e falar com naturalidade.</p>
+        </div>
+      </details>
+      <details class="faq__item reveal" name="faq">
+        <summary>A clínica atende por convênio? Como funciona o pagamento?<span class="faq__chevron"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></span></summary>
+        <div class="faq__content">
+          <p>Não trabalhamos com planos de saúde. Apresentamos as condições e formas de pagamento na avaliação — fale com nossa equipe pelo WhatsApp para conhecer as opções.</p>
+        </div>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -451,18 +630,89 @@
   <div class="location__head">
     <span class="eyebrow reveal"><span class="rule"></span>Onde estamos</span>
     <h2 class="section-title reveal">Venha nos visitar em Itaguaí</h2>
+    <p class="location__sub reveal">Um espaço pensado para o seu conforto, no coração do Centro de Itaguaí — fácil de chegar e feito para acolher.</p>
+    <span class="location__ornament reveal" aria-hidden="true">
+      <span class="location__ornament-line"></span>
+      <span class="location__ornament-gem"></span>
+      <span class="location__ornament-line"></span>
+    </span>
   </div>
   <div class="location__grid">
-    <div class="contact__map reveal reveal--left">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6988.4408739395785!2d-43.777829499999996!3d-22.8723442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bf889bfb9f323%3A0x25efff0efa62e76c!2sIsiortho%20Odontologia%20Implante%20Dent%C3%A1rio!5e1!3m2!1spt-BR!2sbr!4v1782740133481!5m2!1spt-BR!2sbr" width="100%" height="280" style="border:0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mapa Isiortho"></iframe>
+    <!-- Vídeo da Clínica -->
+    <div class="location__video reveal">
+      <video
+        src="Assets/isiortho-recepcao-cantinho-cafe-clinica.mp4"
+        autoplay muted loop playsinline preload="metadata"
+        aria-label="Tour pela recepção e cantinho do café da Isiortho"
+      ></video>
+      <div class="location__video-overlay"></div>
+      <div class="location__video-cap">
+        <span class="location__video-tag">Clínica</span>
+        <p>Nosso espaço de acolhimento</p>
+      </div>
     </div>
+
+    <div class="contact__map reveal reveal--left">
+      <div class="contact__map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6988.4408739395785!2d-43.777829499999996!3d-22.8723442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bf889bfb9f323%3A0x25efff0efa62e76c!2sIsiortho%20Odontologia%20Implante%20Dent%C3%A1rio!5e1!3m2!1spt-BR!2sbr!4v1782740133481!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mapa Isiortho"></iframe>
+      </div>
+      <a href="https://www.google.com/maps?daddr=Av.+Paulo+de+Frontin,+175+-+101+-+Centro,+Itagua%C3%AD+-+RJ,+23815-490" target="_blank" rel="noopener" class="contact__map-cta">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.71 11.29l-9-9c-.39-.39-1.02-.39-1.41 0l-9 9c-.39.39-.39 1.02 0 1.41l9 9c.39.39 1.02.39 1.41 0l9-9c.39-.38.39-1.01 0-1.41zM14 14.5V12h-4v2H8v-3c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+        Como Chegar
+      </a>
+    </div>
+    
     <div class="contact__card reveal reveal--right">
-      <div class="contact__row"><span class="contact__ico">&#128205;</span><div><div class="contact__k">Endereço</div><a href="https://www.google.com/maps?daddr=Av.+Paulo+de+Frontin,+175+-+101+-+Centro,+Itagua%C3%AD+-+RJ,+23815-490" target="_blank" rel="noopener">Av. Paulo de Frontin, 175 — sala 101<br>Centro, Itaguaí - RJ · 23815-490</a></div></div>
-      <div class="contact__row"><span class="contact__ico">&#128336;</span><div><div class="contact__k">Horário</div><span>Seg. a Sex.: 9h às 18h<br>Sáb. e Dom.: Fechado</span></div></div>
-      <div class="contact__row"><span class="contact__ico">&#128172;</span><div><div class="contact__k">WhatsApp</div><a href="https://wa.me/5521990162232" target="_blank" rel="noopener">(21) 99016-2232</a></div></div>
-      <div class="contact__bairros">
-        <span class="contact__bairros-lbl">Atendemos:</span>
-        <span class="chip">Itaguaí</span><span class="chip">Muriqui</span><span class="chip">Seropédica</span><span class="chip">Itacuruça</span><span class="chip">Mangaratiba</span><span class="chip">Piranema</span>
+      <div class="contact__card-badge">Clínica Isiortho</div>
+      
+      <div class="contact__rows">
+        <!-- Endereço -->
+        <div class="contact__row">
+          <span class="contact__ico-box">
+            <svg class="contact__svg-ico" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 2a8 8 0 00-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 00-8-8z"/><circle cx="12" cy="10" r="3" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <div>
+            <div class="contact__k">Localização</div>
+            <a href="https://www.google.com/maps?daddr=Av.+Paulo+de+Frontin,+175+-+101+-+Centro,+Itagua%C3%AD+-+RJ,+23815-490" target="_blank" rel="noopener" class="contact__link-addr">
+              Av. Paulo de Frontin, 175 — Sala 101<br>
+              Centro, Itaguaí - RJ · 23815-490
+            </a>
+          </div>
+        </div>
+
+        <!-- Horário -->
+        <div class="contact__row">
+          <span class="contact__ico-box">
+            <svg class="contact__svg-ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h6"/></svg>
+          </span>
+          <div>
+            <div class="contact__k">Horário de Atendimento</div>
+            <span class="contact__v">Segunda a Sexta: 9h às 18h<br><small style="opacity: 0.65;">Sábado e Domingo: Fechado</small></span>
+          </div>
+        </div>
+
+        <!-- Contato -->
+        <div class="contact__row">
+          <span class="contact__ico-box">
+            <svg class="contact__svg-ico" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.13 8.13 0 012.41 5.82c0 4.54-3.7 8.24-8.24 8.24-1.44 0-2.86-.38-4.11-1.09l-.3-.18-3.06.8.82-2.98-.2-.31a8.18 8.18 0 01-1.26-4.38c0-4.54 3.7-8.24 8.23-8.24M8.75 8c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.03s.87 2.35.99 2.52c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.09.47-.07 1.45-.59 1.65-1.17.2-.57.2-1.07.14-1.17-.06-.1-.22-.16-.48-.29-.25-.13-1.45-.71-1.67-.8-.22-.09-.38-.13-.54.13-.16.25-.61.79-.75.94-.14.15-.28.17-.54.04-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.4-1.76-.15-.26-.02-.4.11-.53.12-.11.25-.3.38-.45.13-.15.17-.25.25-.42.09-.17.04-.32-.02-.45-.06-.13-.54-1.3-.74-1.79-.19-.48-.39-.41-.54-.42-.14 0-.3-.01-.46-.01"/></svg>
+          </span>
+          <div>
+            <div class="contact__k">Telefone &amp; WhatsApp</div>
+            <a href="https://wa.me/5521990162232" target="_blank" rel="noopener" class="contact__link-val">(21) 99016-2232</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__regions">
+        <div class="contact__regions-title">Regiões Atendidas</div>
+        <div class="contact__regions-chips">
+          <span class="contact__chip">Itaguaí</span>
+          <span class="contact__chip">Muriqui</span>
+          <span class="contact__chip">Seropédica</span>
+          <span class="contact__chip">Itacuruçá</span>
+          <span class="contact__chip">Mangaratiba</span>
+          <span class="contact__chip">Piranema</span>
+        </div>
       </div>
     </div>
   </div>
@@ -481,19 +731,13 @@
         <li>20 anos de experiência em implantes em Itaguaí-RJ</li>
       </ul>
       <div class="form-section__divider" aria-hidden="true"></div>
-      <div class="form-section__trust">
-        <span class="form-section__stars" aria-hidden="true">★★★★★</span>
-        <span class="form-section__trust-txt"><strong>4,7</strong> · 60 avaliações no Google</span>
-      </div>
       <a class="form-section__wa" href="https://wa.me/5521990162232?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">
         <span class="form-section__wa-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .14 11.9C.14 5.34 5.48 0 12.04 0a11.82 11.82 0 0 1 8.4 3.49 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.68-1.45L.06 24zM6.6 20.13c1.68 1 3.28 1.6 5.43 1.6 5.45 0 9.9-4.43 9.9-9.9a9.9 9.9 0 0 0-16.9-7A9.82 9.82 0 0 0 2.14 11.9c0 2.24.63 3.92 1.7 5.6l-1 3.63 3.76-1zM17.5 14.3c-.07-.12-.27-.2-.56-.34-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5l-.57-.02c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41z"/></svg></span>
         <span class="form-section__wa-txt">Prefere falar agora?<small>WhatsApp · (21) 99016-2232</small></span>
       </a>
     </div>
     <div class="form-card reveal reveal--right">
-      <div class="form-card__head">
-        <span class="form-card__badge"><span class="form-card__dot"></span>Resposta no mesmo dia</span>
-      </div>
+
       <form class="form" id="form" novalidate>
       <label class="field">Nome
         <input name="nome" type="text" autocomplete="name" placeholder="Como podemos te chamar?">
@@ -536,55 +780,97 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer__top">
-    <div class="footer__brand">
-      <img src="Assets/logo-desktop-isiortho.webp" alt="Isiortho">
-      <p>Transformando vidas através de sorrisos há 20 anos. Referência em implantes dentários e dentadura fixa em Itaguaí-RJ.</p>
-    </div>
-    <div class="footer__col">
-      <div class="footer__h">Navegação</div>
-      <a href="#servicos">Tratamentos</a>
-      <a href="#tecnologia">Tecnologia</a>
-      <a href="#sobre">Sobre a Clínica</a>
-      <a href="#depoimentos">Depoimentos</a>
-      <a href="#contato">Contatos</a>
-    </div>
-    <div class="footer__col">
-      <div class="footer__h">Contato</div>
-      <a href="https://share.google/BobRHgXNTQCDAgNDg" target="_blank" rel="noopener">Clínica Isiortho · Google</a>
-      <a href="https://www.google.com/maps?daddr=Av.+Paulo+de+Frontin,+175+-+101+-+Centro,+Itagua%C3%AD+-+RJ,+23815-490" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="flex-shrink:0;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-        <span>Av. Paulo de Frontin, 175 — Itaguaí</span>
-      </a>
-      <a href="https://wa.me/5521990162232?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 0.5rem;">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="flex-shrink:0;"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .14 11.9C.14 5.34 5.48 0 12.04 0a11.82 11.82 0 0 1 8.4 3.49 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.68-1.45L.06 24zM6.6 20.13c1.68 1 3.28 1.6 5.43 1.6 5.45 0 9.9-4.43 9.9-9.9a9.9 9.9 0 0 0-16.9-7A9.82 9.82 0 0 0 2.14 11.9c0 2.24.63 3.92 1.7 5.6l-1 3.63 3.76-1zM17.5 14.3c-.07-.12-.27-.2-.56-.34-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5l-.57-.02c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41z"/></svg>
-        <span>(21) 99016-2232</span>
-      </a>
-      <div class="footer__social">
-        <a href="https://www.instagram.com/isiorthoitaguai/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://web.facebook.com/isiortho/" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer__credits">
-    <div>
-      <span>&copy; Clínica Isiortho 2026 · CNPJ 12.983.410/0001-89</span>
-      <div class="footer-legal-links">
-        <a href="termos-e-condicoes.html">Termos e Condições</a>
-        <span style="margin: 0 8px;">|</span>
-        <a href="politica-de-privacidade.html">Política de Privacidade</a>
-        <span style="margin: 0 8px;">|</span>
-        <a href="#" id="ck-prefs-link" style="text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:6px; font-size: 0.75rem; color: rgba(255,255,255,0.6);">
-          <span id="cookie-toggle" style="display:inline-flex; align-items:center; width:28px; height:14px; background:rgba(255,255,255,0.1); border-radius:10px; padding:2px; border:1px solid rgba(255,255,255,0.2); position:relative; font-size:8px; font-weight:bold;">
-            <span style="color:#86EFAC; margin-left:2px;">✓</span>
-            <span style="color:#FCA5A5; margin-left:auto; margin-right:2px;">✕</span>
-            <span id="cookie-toggle-dot" style="position:absolute; left:15px; width:10px; height:10px; background:#C49A3C; border-radius:50%; box-shadow:0 0 5px rgba(0,0,0,0.3); transition:left 0.2s ease;"></span>
-          </span>
-          Cookie
+  <div class="footer-main">
+    <!-- Coluna 1: Marca -->
+    <div class="footer-brand">
+      <img src="Assets/logo-desktop-isiortho.webp" alt="Isiortho Odontologia Premium" class="footer-logo">
+      <p class="footer-brand-desc">Transformando vidas através de sorrisos há 20 anos. Referência em implantes dentários, cirurgias guiadas e reabilitação oral de alta complexidade em Itaguaí-RJ.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/isiorthoitaguai/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://web.facebook.com/isiortho/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
         </a>
       </div>
     </div>
-    <span>Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener">AG5 Agência</a></span>
+
+    <!-- Coluna 2: Links Rápidos (Tratamentos) -->
+    <div class="footer-links">
+      <h4>Tratamentos</h4>
+      <ul>
+        <li><a href="#servicos">Implantes Dentários</a></li>
+        <li><a href="#servicos">Dentadura Fixa (Protocolo)</a></li>
+        <li><a href="#servicos">Cirurgia Bucomaxilofacial</a></li>
+        <li><a href="#servicos">Ortodontia Estética</a></li>
+        <li><a href="#servicos">Endodontia (Canal)</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 3: Links Rápidos (Institucional) -->
+    <div class="footer-links">
+      <h4>Institucional</h4>
+      <ul>
+        <li><a href="#servicos">Tratamentos</a></li>
+        <li><a href="#tecnologia">Tecnologia 3D</a></li>
+        <li><a href="#sobre">Sobre a Clínica</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Agendar Consulta</a></li>
+      </ul>
+    </div>
+
+    <!-- Coluna 4: Contato (Ordem Obrigatória) -->
+    <div class="footer-contact">
+      <h4>Contato</h4>
+      <ul>
+        <!-- 1. Nome da empresa com link clicável -->
+        <li>
+          <a href="https://search.google.com/local/writereview?placeid=ChIJI_O5v4n4mwARbOdi-g7_7yU" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2V9h-2V7h8v12zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+            <span>Isiortho Odontologia</span>
+          </a>
+        </li>
+        <!-- 2. Endereço clicável para Maps -->
+        <li>
+          <a href="https://www.google.com/maps?daddr=Av.+Paulo+de+Frontin,+175+-+101+-+Centro,+Itagua%C3%AD+-+RJ,+23815-490" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Av. Paulo de Frontin, 175 — Sala 101<br>Centro, Itaguaí - RJ · 23815-490</span>
+          </a>
+        </li>
+        <!-- 3. Telefone/WhatsApp com ícone do WhatsApp -->
+        <li>
+          <a href="https://wa.me/5521990162232?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20uma%20informa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M.06 24l1.68-6.13A11.86 11.86 0 0 1 .14 11.9C.14 5.34 5.48 0 12.04 0a11.82 11.82 0 0 1 8.4 3.49 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.68-1.45L.06 24zM6.6 20.13c1.68 1 3.28 1.6 5.43 1.6 5.45 0 9.9-4.43 9.9-9.9a9.9 9.9 0 0 0-16.9-7A9.82 9.82 0 0 0 2.14 11.9c0 2.24.63 3.92 1.7 5.6l-1 3.63 3.76-1zM17.5 14.3c-.07-.12-.27-.2-.56-.34-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5l-.57-.02c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.2 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41z"/></svg>
+            <span>(21) 99016-2232</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-container">
+      <div class="footer-credits-left">
+        <span class="footer-copyright">&copy; 2026 Isiortho Odontologia · CNPJ 12.983.410/0001-89</span>
+        <div class="footer-legal-links">
+          <a href="#" id="ck-prefs-link" style="text-decoration:none; color:inherit; display:inline-flex; align-items:center; gap:6px;">
+            <span id="cookie-toggle" style="display:inline-flex; align-items:center; width:28px; height:14px; background:rgba(255,255,255,0.1); border-radius:10px; padding:2px; border:1px solid rgba(255,255,255,0.2); position:relative; font-size:8px; font-weight:bold;">
+              <span style="color:#86EFAC; margin-left:2px;">✓</span>
+              <span style="color:#FCA5A5; margin-left:auto; margin-right:2px;">✕</span>
+              <span id="cookie-toggle-dot" style="position:absolute; left:15px; width:10px; height:10px; background:var(--gold); border-radius:50%; box-shadow:0 0 5px rgba(0,0,0,0.3); transition:left 0.2s ease;"></span>
+            </span>
+            <span>Cookies</span>
+          </a>
+          <span class="footer-legal-sep">|</span>
+          <a href="termos-e-condicoes.html">Termos e Condições</a>
+          <span class="footer-legal-sep">|</span>
+          <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        </div>
+      </div>
+      <div class="footer-credits-right">
+        <span>Desenvolvido por <a href="https://www.ag5agencia.com.br" target="_blank" rel="noopener noreferrer">AG5 Agência</a></span>
+      </div>
+    </div>
   </div>
 </footer>
 
