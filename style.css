@@ -348,14 +348,11 @@ body.no-scroll{overflow:hidden}
 }
 @media (max-width:560px){
   .pain__showcase{max-width:330px}
-  .pain__stack-foot{flex-direction:column;align-items:center;gap:14px}
-  .pain__stack .pain__card{width:88%;left:6%}
-  .pain__stack .pain__card.is-front{left:6%;transform:scale(1)}
-  .pain__stack .pain__card.is-back{left:0;transform:scale(.94) rotate(-3deg)}
-  .pain__stack .pain__card.is-hidden{left:0;transform:scale(.9) rotate(-5deg)}
-  .pain__stack .pain__card--protese.is-front{transform:scale(1)}
-  .pain__stack .pain__card--protese.is-back{transform:scale(.85) rotate(-3deg)}
-  .pain__stack .pain__card--protese.is-hidden{transform:scale(.78) rotate(-5deg)}
+  .pain__stack{aspect-ratio:auto;height:auto;padding-bottom:60px}
+  .pain__stack .pain__card{position:relative;width:100%;left:0 !important;transform:none !important;opacity:1 !important;filter:none !important;margin-bottom:16px}
+  .pain__stack .pain__card:last-child{margin-bottom:0}
+  .pain__stack .pain__card.is-hidden{display:none}
+  .pain__stack-foot{flex-direction:column;align-items:center;gap:14px;margin-top:18px}
 }
 
 /* ---------- Services ---------- */
