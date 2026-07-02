@@ -348,11 +348,7 @@ body.no-scroll{overflow:hidden}
 }
 @media (max-width:560px){
   .pain__showcase{max-width:330px}
-  .pain__stack{aspect-ratio:auto;height:auto;padding-bottom:60px}
-  .pain__stack .pain__card{position:relative;width:100%;left:0 !important;transform:none !important;opacity:1 !important;filter:none !important;margin-bottom:16px}
-  .pain__stack .pain__card:last-child{margin-bottom:0}
-  .pain__stack .pain__card.is-hidden{display:none}
-  .pain__stack-foot{flex-direction:column;align-items:center;gap:14px;margin-top:18px}
+  .pain__stack-foot{flex-direction:column;align-items:center;gap:14px}
 }
 
 /* ---------- Services ---------- */
