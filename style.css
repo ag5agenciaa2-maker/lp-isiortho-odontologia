@@ -287,14 +287,14 @@ body.no-scroll{overflow:hidden}
 .pain__glow{position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:720px;height:420px;background:radial-gradient(ellipse at center,rgba(150,130,70,.18),transparent 70%);pointer-events:none}
 .pain__inner{position:relative;z-index:1;max-width:1060px;margin:0 auto}
 /* Grid de duas colunas: texto | imagens */
-.pain__grid{max-width:1200px;display:grid;grid-template-columns:0.82fr 1.18fr;gap:clamp(32px,5vw,72px);align-items:center}
+.pain__grid{max-width:1060px;display:grid;grid-template-columns:minmax(0,480px) minmax(0,390px);justify-content:center;gap:clamp(36px,4vw,64px);align-items:center}
 .pain__text{max-width:480px}
 .pain__title{font-family:var(--font-title);font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.14;letter-spacing:-.01em;margin:0 0 18px}
 .pain__title em{color:var(--champ)}
 .pain__lead{font-size:clamp(15.5px,1.2vw,17px);line-height:1.7;color:rgba(255,255,255,.78);max-width:46ch}
 
 /* Palco: uma imagem sobre a outra; a de trás espia embaixo à esquerda */
-.pain__showcase{position:relative;width:100%;max-width:420px;margin-left:auto}
+.pain__showcase{position:relative;width:100%;max-width:390px;margin:0 auto}
 .pain__showcase-glow{position:absolute;z-index:0;top:-8%;left:-4%;right:-4%;height:74%;pointer-events:none;background:radial-gradient(58% 60% at 55% 42%,rgba(150,130,70,.30),transparent 72%);filter:blur(6px)}
 .pain__showcase-ring{position:absolute;z-index:0;top:-6%;right:-8%;width:190px;height:190px;border:1px solid rgba(201,182,140,.28);border-radius:50%;pointer-events:none}
 
