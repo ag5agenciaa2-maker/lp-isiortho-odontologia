@@ -106,9 +106,15 @@
 
     /* ---------- Navbar solidifica ao rolar ---------- */
     var nav = document.getElementById('nav');
+    var scrollPending = false;
     var onScroll = function () {
-      if (window.scrollY > 40) nav.classList.add('is-solid');
-      else nav.classList.remove('is-solid');
+      if (scrollPending) return;
+      scrollPending = true;
+      requestAnimationFrame(function () {
+        scrollPending = false;
+        if (window.scrollY > 40) nav.classList.add('is-solid');
+        else nav.classList.remove('is-solid');
+      });
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
@@ -496,6 +502,8 @@
       if (dotsEl) {
         cards.forEach(function (_, i) {
           var b = document.createElement('button');
+          b.setAttribute('role', 'tab');
+          b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
           b.setAttribute('aria-label', 'Ir para vídeo ' + (i + 1));
           b.addEventListener('click', function () { go(i); });
           dotsEl.appendChild(b);
@@ -524,6 +532,7 @@
         if (dotsEl) {
           Array.prototype.forEach.call(dotsEl.children, function (d, i) {
             d.classList.toggle('is-active', i === active);
+            d.setAttribute('aria-selected', i === active ? 'true' : 'false');
           });
         }
         /* pausa todos os não-ativos; toca preview mudo no ativo */
@@ -607,7 +616,7 @@
         if (mTitle) mTitle.textContent = card.getAttribute('data-title') || '';
         if (mTag)   mTag.textContent   = card.getAttribute('data-tag') || '';
         modal.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
+        document.body.classList.add('no-scroll');
         mVideo.currentTime = 0;
         mVideo.muted = false;
         mVideo.play().catch(function () {});
@@ -616,7 +625,7 @@
         if (!modal) return;
         modal.classList.remove('is-open');
         if (mVideo) { mVideo.pause(); mVideo.src = ''; }
-        document.body.style.overflow = '';
+        document.body.classList.remove('no-scroll');
       }
       if (mClose)   mClose.addEventListener('click', closeModal);
       if (mOverlay) mOverlay.addEventListener('click', closeModal);
@@ -664,6 +673,8 @@
         cards.forEach(function (_, i) {
           var b = document.createElement('button');
           b.type = 'button';
+          b.setAttribute('role', 'tab');
+          b.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
           b.setAttribute('aria-label', 'Ver caso ' + (i + 1));
           b.addEventListener('click', function (e) { e.stopPropagation(); topIdx = i; render(); });
           dotsEl.appendChild(b);
@@ -681,6 +692,7 @@
         if (dotsEl) {
           Array.prototype.forEach.call(dotsEl.children, function (d, i) {
             d.classList.toggle('is-active', i === topIdx);
+            d.setAttribute('aria-selected', i === topIdx ? 'true' : 'false');
           });
         }
       }
