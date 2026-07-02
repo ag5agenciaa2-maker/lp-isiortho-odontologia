@@ -1982,7 +1982,7 @@ body.no-scroll{overflow:hidden}
   .hero__text{padding:104px var(--pad-x) clamp(26px,5vw,38px)}
   .hero__title{max-width:18ch}
   .hero__sub{max-width:54ch}
-  .hero__emblem{top:92px;right:5%;width:80px;height:80px}
+  .hero__emblem{display:none}
   /* reel centralizado logo após o CTA */
   .hero__img{
     margin:0 var(--pad-x) clamp(10px,3vw,20px);
