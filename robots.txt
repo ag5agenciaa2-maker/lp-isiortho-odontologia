@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://isiortho.com.br/sitemap.xml
+Sitemap: https://isiortho.ag5agencia.site/sitemap.xml
 
 # Disallow admin or private areas (if any)
 # Disallow: /admin/
