@@ -287,7 +287,7 @@ body.no-scroll{overflow:hidden}
 .pain__glow{position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:720px;height:420px;background:radial-gradient(ellipse at center,rgba(150,130,70,.18),transparent 70%);pointer-events:none}
 .pain__inner{position:relative;z-index:1;max-width:1060px;margin:0 auto}
 /* Grid de duas colunas: texto | imagens */
-.pain__grid{max-width:1060px;display:grid;grid-template-columns:minmax(0,480px) minmax(0,390px);justify-content:center;gap:clamp(36px,4vw,64px);align-items:center}
+.pain__grid{max-width:1240px;display:grid;grid-template-columns:minmax(0,480px) minmax(0,390px);justify-content:center;gap:clamp(64px,8vw,152px);align-items:center}
 .pain__text{max-width:480px}
 .pain__title{font-family:var(--font-title);font-weight:500;font-size:clamp(28px,3.4vw,46px);line-height:1.14;letter-spacing:-.01em;margin:0 0 18px}
 .pain__title em{color:var(--champ)}
