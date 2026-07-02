@@ -301,6 +301,13 @@ body.no-scroll{overflow:hidden}
 .pain__stack{position:relative;z-index:1;width:100%;aspect-ratio:6/7;cursor:pointer;outline:none}
 .pain__stack:focus-visible{outline:2px solid var(--champ);outline-offset:8px;border-radius:22px}
 .pain__stack .pain__card{position:absolute;width:78%;margin:0;transition:top .6s cubic-bezier(.34,1.28,.5,1),left .6s cubic-bezier(.34,1.28,.5,1),transform .5s var(--ease),opacity .5s var(--ease),filter .5s var(--ease),box-shadow .5s var(--ease);will-change:top,left,transform,opacity}
+/* Card de prótese — maior que os outros, então escala diferenciada */
+.pain__stack .pain__card--protese{transform-origin:center bottom}
+.pain__stack .pain__card--protese.is-front{transform:scale(1.05)}
+.pain__stack .pain__card--protese.is-front:hover{transform:scale(1.065)}
+.pain__stack .pain__card--protese.is-back{transform:scale(.85) rotate(-3deg)}
+.pain__stack .pain__card--protese.is-back:hover{transform:scale(.85) rotate(-3deg)}
+.pain__stack .pain__card--protese.is-hidden{transform:scale(.78) rotate(-5deg)}
 .pain__stack .pain__card.is-front{top:0;left:22%;z-index:3;transform:scale(1);opacity:1;filter:none}
 .pain__stack .pain__card.is-front:hover{transform:scale(1.015)}
 .pain__stack .pain__card.is-back{top:20%;left:0;z-index:2;transform:scale(.94) rotate(-3deg);opacity:.94;filter:brightness(.62) saturate(.9)}
