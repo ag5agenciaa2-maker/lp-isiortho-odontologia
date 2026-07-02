@@ -648,6 +648,55 @@
       render();
     })();
 
+    /* ============================================================
+       PAIN — Baralho de casos Antes/Depois (clique troca a carta)
+       ============================================================ */
+    (function () {
+      var stack = document.getElementById('painStack');
+      if (!stack) return;
+      var dotsEl = document.getElementById('painDots');
+      var cards = Array.prototype.slice.call(stack.querySelectorAll('.pain__card'));
+      var n = cards.length;
+      if (!n) return;
+      var topIdx = 0;
+
+      if (dotsEl) {
+        cards.forEach(function (_, i) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', 'Ver caso ' + (i + 1));
+          b.addEventListener('click', function (e) { e.stopPropagation(); topIdx = i; render(); });
+          dotsEl.appendChild(b);
+        });
+      }
+
+      function render() {
+        cards.forEach(function (card, i) {
+          var rel = ((i - topIdx) % n + n) % n; /* 0 = frente, 1 = atrás */
+          card.classList.remove('is-front', 'is-back', 'is-hidden');
+          if (rel === 0) card.classList.add('is-front');
+          else if (rel === 1) card.classList.add('is-back');
+          else card.classList.add('is-hidden');
+        });
+        if (dotsEl) {
+          Array.prototype.forEach.call(dotsEl.children, function (d, i) {
+            d.classList.toggle('is-active', i === topIdx);
+          });
+        }
+      }
+      function next() { topIdx = (topIdx + 1) % n; render(); }
+      function prev() { topIdx = (topIdx - 1 + n) % n; render(); }
+
+      stack.addEventListener('click', next);
+      stack.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); next(); }
+        else if (e.key === 'ArrowRight') { next(); }
+        else if (e.key === 'ArrowLeft') { prev(); }
+      });
+
+      render();
+    })();
+
   });
 })();
 
