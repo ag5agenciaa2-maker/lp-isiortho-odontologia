@@ -298,9 +298,9 @@ body.no-scroll{overflow:hidden}
 .pain__showcase-glow{position:absolute;z-index:0;top:-8%;left:-4%;right:-4%;height:74%;pointer-events:none;background:radial-gradient(58% 60% at 55% 42%,rgba(150,130,70,.30),transparent 72%);filter:blur(6px)}
 .pain__showcase-ring{position:absolute;z-index:0;top:-6%;right:-8%;width:190px;height:190px;border:1px solid rgba(201,182,140,.28);border-radius:50%;pointer-events:none}
 
-.pain__stack{position:relative;z-index:1;width:100%;aspect-ratio:6/7;cursor:pointer;outline:none}
+.pain__stack{position:relative;z-index:1;width:100%;aspect-ratio:5/6.8;cursor:pointer;outline:none}
 .pain__stack:focus-visible{outline:2px solid var(--champ);outline-offset:8px;border-radius:22px}
-.pain__stack .pain__card{position:absolute;width:78%;margin:0;transition:top .6s cubic-bezier(.34,1.28,.5,1),left .6s cubic-bezier(.34,1.28,.5,1),transform .5s var(--ease),opacity .5s var(--ease),filter .5s var(--ease),box-shadow .5s var(--ease);will-change:top,left,transform,opacity}
+.pain__stack .pain__card{position:absolute;width:78%;margin:0;transition:top .55s var(--ease),left .55s var(--ease),transform .55s var(--ease),opacity .45s var(--ease),filter .45s var(--ease),box-shadow .45s var(--ease);will-change:top,left,transform,opacity}
 /* Card de prótese — maior que os outros, então escala diferenciada */
 .pain__stack .pain__card--protese{transform-origin:center bottom}
 .pain__stack .pain__card--protese.is-front{transform:scale(1.05)}
@@ -310,16 +310,19 @@ body.no-scroll{overflow:hidden}
 .pain__stack .pain__card--protese.is-hidden{transform:scale(.78) rotate(-5deg)}
 .pain__stack .pain__card.is-front{top:0;left:22%;z-index:3;transform:scale(1);opacity:1;filter:none}
 .pain__stack .pain__card.is-front:hover{transform:scale(1.015)}
-.pain__stack .pain__card.is-back{top:20%;left:0;z-index:2;transform:scale(.94) rotate(-3deg);opacity:.94;filter:brightness(.62) saturate(.9)}
+.pain__stack .pain__card.is-back{top:15%;left:0;z-index:2;transform:scale(.94) rotate(-3deg);opacity:.94;filter:brightness(.62) saturate(.9)}
 .pain__stack .pain__card.is-back:hover{transform:scale(.94) rotate(-3deg)}
-.pain__stack .pain__card.is-hidden{top:26%;left:0;z-index:1;transform:scale(.9) rotate(-5deg);opacity:0}
+.pain__stack .pain__card.is-hidden{top:20%;left:0;z-index:1;transform:scale(.9) rotate(-5deg);opacity:0}
 
-.pain__stack-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:22px}
+.pain__stack-foot{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:30px}
 .pain__stack-hint{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;color:rgba(255,255,255,.6);line-height:1.3}
 .pain__stack-hint svg{width:16px;height:16px;color:var(--champ);flex-shrink:0}
-.pain__dots{display:flex;gap:8px;flex-shrink:0}
-.pain__dots button{width:28px;height:44px;padding:18px 10px;background-clip:content-box;border-radius:22px;border:none;background-color:rgba(255,255,255,.25);cursor:pointer;transition:background .3s ease,width .3s ease,border-radius .3s ease}
-.pain__dots button.is-active{background-image:linear-gradient(135deg,var(--champ),var(--gold));width:42px}
+.pain__dots{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.pain__dots button{display:flex;align-items:center;justify-content:center;width:20px;height:44px;padding:0;border:none;background:none;cursor:pointer}
+.pain__dots button::before{content:"";display:block;width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.28);transition:width .45s var(--ease),background-color .45s var(--ease)}
+.pain__dots button:hover::before{background:rgba(255,255,255,.5)}
+.pain__dots button.is-active{width:38px}
+.pain__dots button.is-active::before{width:26px;background:linear-gradient(135deg,var(--champ),var(--gold))}
 .result-card{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(201,182,140,.22);border-radius:20px;overflow:hidden;box-shadow:0 30px 64px rgba(0,0,0,.42);transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .4s ease}
 .result-card:hover{transform:translateY(-8px);border-color:rgba(201,182,140,.55);box-shadow:0 46px 84px rgba(0,0,0,.55),0 0 42px rgba(150,130,70,.16)}
 .result-card::after{content:"";position:absolute;inset:10px;border:1px solid rgba(201,182,140,.35);border-radius:12px;opacity:0;pointer-events:none;z-index:4;transition:opacity .45s var(--ease)}
@@ -2387,9 +2390,12 @@ body.no-scroll{overflow:hidden}
 .vi-card.is-playing .vi-card__info{transform:translateY(8px);opacity:.85}
 
 /* Dots */
-.vi__dots{display:flex;justify-content:center;gap:8px;margin-top:26px}
-.vi__dots button{width:27px;height:43px;padding:18px 10px;background-clip:content-box;border-radius:22px;background-color:rgba(255,255,255,.25);border:none;cursor:pointer;transition:background .3s ease,width .3s ease,border-radius .3s ease}
-.vi__dots button.is-active{background-image:linear-gradient(135deg,var(--champ),var(--gold));width:44px}
+.vi__dots{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:26px}
+.vi__dots button{display:flex;align-items:center;justify-content:center;width:20px;height:44px;padding:0;border:none;background:none;cursor:pointer}
+.vi__dots button::before{content:"";display:block;width:9px;height:9px;border-radius:999px;background:rgba(255,255,255,.28);transition:width .45s var(--ease),background-color .45s var(--ease)}
+.vi__dots button:hover::before{background:rgba(255,255,255,.5)}
+.vi__dots button.is-active{width:38px}
+.vi__dots button.is-active::before{width:26px;background:linear-gradient(135deg,var(--champ),var(--gold))}
 
 /* ============ MODAL (Expandir) ============ */
 .vi-modal{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px);opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease}
