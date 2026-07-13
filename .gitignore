@@ -17,3 +17,8 @@ tmp/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Documentos internos AG5 (dados do cliente, relatórios, templates de trabalho)
+# NUNCA vão pro repo/deploy — o Cloudflare Pages serve o repo inteiro publicamente
+Docs/
+docs/

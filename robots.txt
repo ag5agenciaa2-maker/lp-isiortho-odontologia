@@ -1,11 +1,13 @@
 User-agent: *
 Allow: /
+Disallow: /Docs/
+Disallow: /docs/
 
 # Sitemap
 Sitemap: https://isiortho.ag5agencia.site/sitemap.xml
 
-# Disallow admin or private areas (if any)
-# Disallow: /admin/
+# Guia para modelos de linguagem (LLMs)
+# LLMs: https://isiortho.ag5agencia.site/llms.txt
 
 # Allow AI crawlers for GEO optimization
 User-agent: ChatGPT-User

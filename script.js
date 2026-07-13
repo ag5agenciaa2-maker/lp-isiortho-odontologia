@@ -436,44 +436,83 @@
       });
     }
 
-    /* ---------- WhatsApp Premium Experience ---------- */
-    var bubble = document.getElementById('wa-message-bubble');
-    var typing = document.getElementById('wa-typing');
-    var realMessage = document.getElementById('wa-real-message');
-    var badge = document.getElementById('wa-notification');
-    var closeBtn = document.getElementById('wa-close-btn');
-    var mainBtn = document.getElementById('wa-main-btn');
+    /* ---------- WhatsApp Premium Experience (AG5 V4 · Compliance Mode) ---------- */
+    (function () {
+      var MODO_COMPLIANCE = true; // odontologia = nicho regulado (CFO) → sem badge
 
-    if (bubble && typing && realMessage && badge && closeBtn && mainBtn) {
-      // 1. Mostrar o balão após 6 segundos
-      setTimeout(function () {
-        bubble.classList.add('show');
-        
-        // 2. Simular digitação por 2.5 segundos antes de mostrar a mensagem
-        setTimeout(function () {
-          typing.style.display = 'none';
-          realMessage.style.display = 'block';
-        }, 2500);
+      var bubble = document.getElementById('wa-message-bubble');
+      var typing = document.getElementById('wa-typing');
+      var realMessage = document.getElementById('wa-real-message');
+      var badge = document.getElementById('wa-notification');
+      var closeBtn = document.getElementById('wa-close-btn');
+      var mainBtn = document.getElementById('wa-main-btn');
+      var targetSection = document.getElementById('servicos'); // 3ª seção da página
 
-      }, 6000);
+      if (!bubble || !typing || !realMessage || !closeBtn || !mainBtn || !targetSection) return;
 
-      // Fechar balão
+      var DELAY_BALAO = 25000;
+      var DURATION_TYPING = 2500;
+      var DURATION_BALAO_VISIVEL = 15000;
+      var DELAY_BADGE_APOS_SUMIR = 5000;
+
+      var triggered = false;
+      var autoHideTimer = null;
+      var badgeTimer = null;
+      var userClosed = false;
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !triggered) {
+            triggered = true;
+            mainBtn.classList.add('visible');
+
+            setTimeout(function () {
+              if (userClosed) return;
+              bubble.classList.add('show');
+
+              setTimeout(function () {
+                if (userClosed) return;
+                typing.style.display = 'none';
+                realMessage.style.display = 'block';
+              }, DURATION_TYPING);
+
+              autoHideTimer = setTimeout(function () {
+                if (userClosed) return;
+                bubble.classList.remove('show');
+
+                if (!MODO_COMPLIANCE && badge) {
+                  badgeTimer = setTimeout(function () {
+                    if (userClosed) return;
+                    badge.classList.add('show');
+                  }, DELAY_BADGE_APOS_SUMIR);
+                }
+              }, DURATION_BALAO_VISIVEL);
+            }, DELAY_BALAO);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      observer.observe(targetSection);
+
       closeBtn.addEventListener('click', function (e) {
         e.preventDefault();
         e.stopPropagation();
+        userClosed = true;
         bubble.classList.remove('show');
-        // Mostrar notificação após fechar para manter engajamento
-        setTimeout(function () {
-          badge.classList.add('show');
-        }, 2000);
+        if (autoHideTimer) clearTimeout(autoHideTimer);
+        if (badgeTimer) clearTimeout(badgeTimer);
+        if (!MODO_COMPLIANCE && badge) {
+          setTimeout(function () { badge.classList.add('show'); }, DELAY_BADGE_APOS_SUMIR);
+        }
       });
 
-      // Ao clicar no botão, remove tudo
       mainBtn.addEventListener('click', function () {
         bubble.classList.remove('show');
-        badge.classList.remove('show');
+        if (badge) badge.classList.remove('show');
+        if (autoHideTimer) clearTimeout(autoHideTimer);
+        if (badgeTimer) clearTimeout(badgeTimer);
       });
-    }
+    })();
 
     /* ============================================================
        VÍDEOS INSTITUCIONAIS — Carrossel Coverflow
